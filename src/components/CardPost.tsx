@@ -1,17 +1,19 @@
 import Image from "next/image"
 import Link from "next/link"
+import Avatar from "./Avatar";
 // import { format } from "date-fns"
 // import ptBR from "date-fns/locale/pt-BR"
 
 interface CardPostProps {
   title: string;
   author: string;
+  urlAvatar: string
   createdAt: string;
   urlImage: string;
   slug: string;
 }
 
-export default function CardPost({ author, createdAt, title, urlImage, slug }: CardPostProps) {
+export default function CardPost({ author, createdAt, title, urlImage, urlAvatar, slug }: CardPostProps) {
   return (
     <Link 
       href={`/post/${slug}`}
@@ -30,7 +32,7 @@ export default function CardPost({ author, createdAt, title, urlImage, slug }: C
         <p className='text-white text-xs md:text-sm'>{createdAt}</p>
         <h1 className='font-bold text-lg sm:text-xl text-white'>{title}</h1>
         <div>
-          <p className='font-bold text-white text-sm md:text-base'>{author}</p>
+          <Avatar name={author} url={urlAvatar} color="text-white"/>
         </div>
       </div>
     </Link>

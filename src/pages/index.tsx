@@ -40,6 +40,9 @@ interface AllPosts {
     };
     author: {
       name: string;
+      avatar: {
+        url: string;
+      }
     };
   }[];
 }
@@ -75,6 +78,7 @@ export default function Home({ posts }: AllPosts) {
                     author={post.author.name}
                     createdAt={format(new Date(post.createdAt), "dd 'de' MMM 'de' yyyy", { locale: ptBR })}
                     urlImage={post.coverImage.url}
+                    urlAvatar={post.author.avatar.url}
                     slug={post.slug}
                   />
                 );

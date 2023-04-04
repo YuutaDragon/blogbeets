@@ -96,7 +96,7 @@ export default function Post({ post }: PostProps) {
             />
           </div>
         </div>
-        <Avatar name={post.author.name} url={post.author.avatar.url}/>
+        <Avatar name={post.author.name} url={post.author.avatar.url} color="text-zinc-600"/>
       </div>
     </>
   );
