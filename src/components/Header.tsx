@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import BeetsBlogLogo from '../../Public/Beets_Blog_logo.svg' 
+import BeetsBlogLogo from '../../public/Beets_Blog_logo.svg' 
 
 export default function Header() {
   return (
